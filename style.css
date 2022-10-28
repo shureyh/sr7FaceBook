@@ -28,6 +28,7 @@ body{
 
 }
 
+/*----------sticky nav bar------------*/
 nav{
   display: flex;
   align-items: center;
@@ -54,14 +55,15 @@ nav{
   width: 20px;
   margin: 0 15px;
 }
+.nav-user-icon{
+  margin-left: 30px;
+}
 .nav-user-icon img{
    width: 40px;
    border-radius: 50%;
    cursor: pointer;
 }
-.nav-user-icon{
-   margin-left: 30px;
-}
+
 .search-box{
   background: #efefef;
   width: 350px;
@@ -95,27 +97,24 @@ nav{
   top: 0;
   right: 0;
 }
+
+/*--------body contents-------*/
 .container{
   display: flex;
   justify-content: space-between;
   padding: 13px 5%;
 }
-.left-sidebar, .right-sidebar{
+
+/*--left sidebar----*/
+.left-sidebar{
   flex-basis: 25%;
   position: sticky;
   top: 70px;
   align-self: flex-start;
 }
-.right-sidebar{
-  background: var(--bg-color);
-  padding: 20px;
-  border-radius: 4px;
-  color: #626262;
+.imp-links{
+  border-bottom: 1px solid #ccc;
 }
-.main-content{
-  flex-basis: 47%;
-}
-
 .imp-links a, .shortcut-links a{
    text-decoration: none;
    display: flex;
@@ -124,16 +123,15 @@ nav{
    color: #626262;
    width: fit-content;
 }
+.imp-links a:last-child{
+  color: #1876f2;
+}
 .imp-links a img{
   width: 25px;
   margin-right: 15px;
 }
-.imp-links a:last-child{
-  color: #1876f2;
-}
-.imp-links{
-  border-bottom: 1px solid #ccc;
-}
+
+
 .shortcut-links a img{
   width: 40px;
   border-radius: 4px;
@@ -143,6 +141,18 @@ nav{
   margin: 25px 0;
   color: #626262;
   font-weight: 500;
+}
+
+/*-----right sidebar---*/
+.right-sidebar{
+  flex-basis: 25%;
+  position: sticky;
+  top: 70px;
+  align-self: flex-start;
+  background: var(--bg-color);
+  padding: 20px;
+  border-radius: 4px;
+  color: #626262;
 }
 .sidebar-title{
   display: flex;
@@ -164,6 +174,14 @@ nav{
   font-size: 14px;
   margin-bottom: 20px;
 }
+.events p{
+  font-size: 12px;
+}
+.events a{
+  font-size: 12px;
+  text-decoration: none;
+  color: #1876f2;
+}
 .left-event{
   border-radius: 10px;
   height: 65px;
@@ -174,14 +192,6 @@ nav{
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-.events p{
-  font-size: 12px;
-}
-.events a{
-  font-size: 12px;
-  text-decoration: none;
-  color: #1876f2;
 }
 .left-event span{
   position: absolute;
@@ -218,6 +228,12 @@ nav{
   top: unset;
   bottom: 5px;
 }
+
+/*-------------main content---------*/
+.main-content{
+  flex-basis: 47%;
+}
+/*--stories section--*/
 .story-gallery{
   display: flex;
   justify-content: space-between;
@@ -275,6 +291,7 @@ nav{
   width: 35px;
 }
 
+/*--write post section--*/
 .write-post-container{
   width: 100%;
   background: var(--bg-color);
@@ -402,7 +419,7 @@ nav{
   font-size: 13px;
 
 }
-
+/*------settings menu----------*/
 .settings-menu{
   position: absolute;
   width: 90%;
@@ -419,14 +436,15 @@ nav{
 .settings-menu-height{
   max-height: 450px;
 }
+.settings-menu-inner{
+  padding: 20px;
+}
 .user-profile a{
   font-size: 12px;
   color: #1876f2;
   text-decoration: none;
 }
-.settings-menu-inner{
-  padding: 20px;
-}
+
 .settings-menu hr{
   border: 0;
   height: 1px;
@@ -451,6 +469,8 @@ nav{
   text-decoration: none;
   color: #626262;
 }
+
+/*-------theme--------*/
 #dark-btn{
   position: absolute;
   top: 20px;
