@@ -516,6 +516,7 @@ nav{
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+ 
 }
 
 .pd-row{
@@ -573,12 +574,14 @@ nav{
 .pd-right a img{
   width: 20px;
 }
+
 .profile-info{
   display: flex;
   align-self: flex-start;
   justify-content: space-between;
   margin-top:20px;
 }
+
 .info-col{
   flex-basis: 33%;
 }
@@ -633,13 +636,13 @@ nav{
   color: #1876f2;
   font-size: 14px;
 }
-.photo-box{
+.photo-box, .friends-box{
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-gap: 10px;
   margin-top: 15px;
 }
-.photo-box div img{
+.photo-box div img, .friends-box div img{
   width: 100%;
   cursor: pointer;
 }
@@ -649,15 +652,7 @@ nav{
   
 }
 
-.friends-box{
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-gap: 10px;
-  margin-top: 15px;
-}
 .friends-box div img{
-  width: 100%;
-  cursor: pointer;
   padding-bottom: 20px;
 }
 .friends-box div{
@@ -668,10 +663,6 @@ nav{
   bottom: 0;
   left: 0;
 }
-
-
-
-
 
 
 /* --------media query for homepage-------*/
